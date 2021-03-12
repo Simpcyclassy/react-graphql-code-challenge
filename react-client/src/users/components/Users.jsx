@@ -6,6 +6,7 @@ import { useQuery, gql } from '@apollo/client';
 
 const { Meta } = Card;
 
+
 const USERS = gql`
   query users {
   users {
@@ -18,7 +19,10 @@ const USERS = gql`
 `;
 
 const Users = ({users}) => {
-    const { data } = useQuery(USERS);
+    const { loading, error, data } = useQuery(USERS);
+    if (loading) return <p>Loading...</p>;
+    if (error) return <p>Error :(</p>;
+    console.log(data)
     return (
         <List
             grid={{ gutter: 16, column: 3 }}

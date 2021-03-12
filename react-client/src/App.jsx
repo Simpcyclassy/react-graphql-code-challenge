@@ -3,7 +3,7 @@ import './index.css';
 import logo from './logo.png';
 import 'antd/dist/antd.css';
 import Users from './users/components/Users';
-import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
+import { ApolloProvider, ApolloClient, InMemoryCache, gql } from '@apollo/client';
 
 const client = new ApolloClient({
   uri: 'http://localhost:4000',
