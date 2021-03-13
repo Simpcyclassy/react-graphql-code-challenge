@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Card, Avatar, List } from 'antd';
 import logo from '../../logo.png';
 import { MailFilled, PhoneOutlined} from '@ant-design/icons';
@@ -20,9 +21,10 @@ const USERS = gql`
 
 const Users = ({users}) => {
     const { loading, error, data } = useQuery(USERS);
+
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error :(</p>;
-    console.log(data)
+
     return (
         <List
             grid={{ gutter: 16, column: 3 }}
@@ -52,6 +54,11 @@ const Users = ({users}) => {
         />
     );
 };
-  
+
+Users.propTypes = {
+    data: PropTypes.object,
+    loading: PropTypes.bool,
+};
+
 export default Users;
   
