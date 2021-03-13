@@ -1,4 +1,4 @@
-import Users from './Users';
+import { Users, USERS } from './Users';
 import './styles.scss';
 
-export { Users };
+export { Users, USERS };
