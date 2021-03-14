@@ -10,13 +10,13 @@ const { Meta } = Card;
 
 export const USERS = gql`
   query users {
-  users {
-    id
-    name
-    email
-    phone
+    users {
+        id
+        name
+        email
+        phone
+    }
   }
-}
 `;
 
 export const Users = ({users}) => {
@@ -42,7 +42,7 @@ export const Users = ({users}) => {
                         description={
                             <span>
                                 <MailFilled />
-                                <p>{item.email}</p>
+                                <p id="user-email">{item.email}</p>
                                 <PhoneOutlined />
                                 <p>{item.phone}</p>
                             </span>

@@ -3,7 +3,7 @@ import 'antd/dist/antd.css';
 import React from 'react';
 import './index.css';
 import logo from './logo.png';
-import { Users } from './users/components/Users';
+import { Users } from './users/components';
 
 const client = new ApolloClient({
   uri: 'http://localhost:4000',
