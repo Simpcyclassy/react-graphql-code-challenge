@@ -13,3 +13,6 @@ If you wish to make your forked repository private, feel free to do so. <br />
 Just add `samblackk` as a collaborator so we can review your challenge.
 
 Happy coding!
+
+
+![alt text](https://github.com/Simpcyclassy/react-graphql-code-challenge/blob/main/react-client/src/app-demo.png?raw=true)
