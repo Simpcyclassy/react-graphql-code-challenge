@@ -1,3 +1,3 @@
-import { Users, USERS } from './Users';
+import { Users, GET_USERS } from './Users';
 
-export { Users, USERS };
+export { Users, GET_USERS };

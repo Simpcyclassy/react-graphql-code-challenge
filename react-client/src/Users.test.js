@@ -1,11 +1,11 @@
 import TestRenderer from 'react-test-renderer';
 import { MockedProvider } from '@apollo/client/testing';
-import { Users, USERS } from './users/components';
+import { Users, GET_USERS } from './users/components';
 
 const mocks = [
   {
     request: {
-      query: USERS,
+      query: GET_USERS,
     },
     result: {
       data: {

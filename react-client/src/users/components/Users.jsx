@@ -8,7 +8,7 @@ import { useQuery, gql } from '@apollo/client';
 const { Meta } = Card;
 
 
-export const USERS = gql`
+const GET_USERS = gql`
   query users {
     users {
         id
@@ -19,8 +19,8 @@ export const USERS = gql`
   }
 `;
 
-export const Users = ({users}) => {
-    const { loading, error, data } = useQuery(USERS);
+const Users = () => {
+    const { loading, error, data } = useQuery(GET_USERS);
 
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error :(</p>;
@@ -59,4 +59,5 @@ Users.propTypes = {
     data: PropTypes.object,
     loading: PropTypes.bool,
 };
-  
+
+export { Users, GET_USERS };
